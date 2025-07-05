@@ -83,9 +83,54 @@
       opacity: 1;
       transform: translateY(0);
     }
+    body.loading {
+      overflow: hidden;
+    }
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #0d1117;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .spinner {
+      border: 6px solid #161b22;
+      border-top: 6px solid #58a6ff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      background-image: url('background-cartoon.svg');
+      background-repeat: repeat;
+      background-size: 300px;
+      opacity: 0.03;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+    }
   </style>
 </head>
-<body>
+<body class="loading">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <audio autoplay loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
   <header>
     <img src="logo.png" alt="2FM Logo" class="logo" />
     <h1>2FM Token</h1>
@@ -117,7 +162,6 @@
     <div class="links">
       <a href="https://bscscan.com/token/0x8B01D231eb6313519475661B336031368a561dD5" target="_blank">🔗 View on BscScan</a>
       <a href="https://x.com/2fmProject?t=ceTbG7sIusYnX1OaSZ6VFA&s=09" target="_blank">🐦 Twitter</a>
-      <a href="https://t.me/TwoFMCommunity" target="_blank">📢 Telegram Community</a>
     </div>
   </section>
 
@@ -137,6 +181,11 @@
   </footer>
 
   <script>
+    window.addEventListener('load', () => {
+      document.body.classList.remove('loading');
+      document.getElementById('loader').style.display = 'none';
+    });
+
     window.addEventListener('scroll', () => {
       document.querySelectorAll('.reveal').forEach(el => {
         const top = el.getBoundingClientRect().top;
