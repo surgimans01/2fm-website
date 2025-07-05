@@ -2,209 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>2FM Token | Official Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="logo.png" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #0d1117;
-      color: #e6edf3;
-      padding: 20px;
-      transition: background 0.3s, color 0.3s;
-    }
-    body.light {
-      background: #f5f5f5;
-      color: #111;
-    }
-    header {
-      text-align: center;
-      padding: 30px 0;
-    }
-    h1 {
-      font-size: 3rem;
-      color: #58a6ff;
-    }
-    .section {
-      max-width: 800px;
-      margin: 30px auto;
-      background: #161b22;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
-    }
-    body.light .section {
-      background: #ffffff;
-      color: #111;
-    }
-    .section h2 {
-      color: #79c0ff;
-    }
-    .tokenomics ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .tokenomics li {
-      margin-bottom: 10px;
-    }
-    .links a {
-      color: #58a6ff;
-      text-decoration: none;
-      display: block;
-      margin: 8px 0;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #8b949e;
-      margin-top: 40px;
-    }
-    #theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    #lang-select {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      padding: 6px;
-    }
-    .floating-token {
-      position: absolute;
-      width: 30px;
-      animation: float 10s infinite linear;
-    }
-    @keyframes float {
-      0% { transform: translateY(100vh); }
-      100% { transform: translateY(-10vh); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FM Token</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <select id="lang-select">
-    <option value="en">EN</option>
-    <option value="id">ID</option>
-  </select>
-  <button id="theme-toggle">🌓</button>
-
-  <header>
-    <img src="logo.png" alt="2FM Logo" width="100" />
-    <h1 data-en="2FM Token" data-id="Token 2FM">2FM Token</h1>
-    <p data-en="Reshaping decentralized staking economy"
-       data-id="Merevolusi ekonomi staking terdesentralisasi">Reshaping decentralized staking economy</p>
-  </header>
-
-  <section class="section">
-    <h2 data-en="About 2FM" data-id="Tentang 2FM">About 2FM</h2>
-    <p data-en="2FM is a utility token..."
-       data-id="2FM adalah token utilitas...">
-       2FM is a utility token designed to power decentralized staking platforms and applications with transparency, security, and lightning-fast performance.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2 data-en="Token Supply & Tokenomics" data-id="Pasokan Token & Tokenomik">Token Supply & Tokenomics</h2>
-    <p><strong>Total Supply:</strong> 1,000,000 2FM</p>
-    <div class="tokenomics">
-      <ul>
-        <li><strong>Liquidity Pool:</strong> 50%</li>
-        <li><strong>Team Allocation:</strong> 20%</li>
-        <li><strong>Community & Airdrops:</strong> 20%</li>
-        <li><strong>Reserve:</strong> 10%</li>
-      </ul>
+    <div id="language-toggle">
+        <select>
+            <option value="en">EN</option>
+            <option value="id">ID</option>
+        </select>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>📊 Token Live Stats</h2>
-    <div id="token-stats">
-      <p><strong>Token Price:</strong> <span id="token-price">Loading...</span></p>
-      <p><strong>Market Cap:</strong> <span id="token-marketcap">Loading...</span></p>
-      <p><strong>Holders:</strong> <span id="token-holders">Loading...</span></p>
-    </div>
-    <canvas id="priceChart" width="600" height="300" style="margin-top:20px;"></canvas>
-  </section>
-
-  <section class="section">
-    <h2 data-en="Explore More" data-id="Jelajahi Lebih Lanjut">Explore More</h2>
-    <div class="links">
-      <a href="https://bscscan.com/token/0x8B01D231eb6313519475661B336031368a561dD5" target="_blank">🔗 View on BscScan</a>
-      <a href="https://x.com/2fmProject?t=ceTbG7sIusYnX1OaSZ6VFA&s=09" target="_blank">🐦 Twitter</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 data-en="Roadmap (Q3–Q4 2025)" data-id="Peta Jalan (Q3–Q4 2025)">Roadmap (Q3–Q4 2025)</h2>
-    <ul>
-      <li>✅ Token Launch & Verification</li>
-      <li>🚀 Liquidity Deployment on PancakeSwap</li>
-      <li>💰 Staking Platform Integration</li>
-      <li>📄 Whitepaper & Auditing</li>
-      <li>🌍 Community Growth & Listing on CoinGecko</li>
-    </ul>
-  </section>
-
-  <footer>© 2025 2FM Token. All rights reserved.</footer>
-
-  <audio autoplay loop hidden>
-    <source src="background.mp3" type="audio/mpeg" />
-  </audio>
-
-  <img src="logo.png" class="floating-token" style="top:10%; left:10%;" />
-  <img src="logo.png" class="floating-token" style="top:30%; left:50%;" />
-  <img src="logo.png" class="floating-token" style="top:60%; left:70%;" />
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Chart and Stats
-    document.getElementById("token-price").innerText = "$0.0123";
-    document.getElementById("token-marketcap").innerText = "$12,300";
-    document.getElementById("token-holders").innerText = "1,452";
-
-    const ctx = document.getElementById("priceChart").getContext("2d");
-    new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        datasets: [{
-          label: "2FM Token Price ($)",
-          data: [0.011, 0.012, 0.0115, 0.013, 0.0127, 0.0123, 0.012],
-          fill: true,
-          backgroundColor: "rgba(88, 166, 255, 0.1)",
-          borderColor: "#58a6ff",
-          tension: 0.3
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { labels: { color: "#e6edf3" } }
-        },
-        scales: {
-          x: { ticks: { color: "#8b949e" } },
-          y: { ticks: { color: "#8b949e" } }
-        }
-      }
-    });
-
-    // Theme Toggle
-    document.getElementById("theme-toggle").onclick = () => {
-      document.body.classList.toggle("light");
-    };
-
-    // Language Toggle
-    document.getElementById("lang-select").onchange = (e) => {
-      const lang = e.target.value;
-      document.querySelectorAll("[data-en]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-      });
-    };
-  </script>
+    <div id="theme-toggle">🌙</div>
+    <header>
+        <img src="2fm-logo.png" alt="2FM Logo" />
+        <h1>2FM Token</h1>
+        <p>Reshaping decentralized staking economy</p>
+    </header>
+    <section id="about">
+        <h2>About 2FM</h2>
+        <p>2FM is a utility token designed to power decentralized staking platforms and applications...</p>
+    </section>
+    <section id="tokenomics">
+        <h2>Token Supply & Tokenomics</h2>
+        <p>Total Supply: 1,000,000 2FM</p>
+    </section>
+    <section id="live-data">
+        <h2>Live Token Data</h2>
+        <p>Live stats from BscScan and CoinGecko (placeholder)</p>
+    </section>
+    <script src="scripts.js"></script>
 </body>
 </html>
