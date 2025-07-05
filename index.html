@@ -17,6 +17,7 @@
     header {
       text-align: center;
       padding: 30px 0;
+      animation: fadeIn 2s ease-in-out;
     }
     h1 {
       font-size: 3rem;
@@ -29,6 +30,10 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .section:hover {
+      transform: scale(1.02);
     }
     .section h2 {
       color: #79c0ff;
@@ -45,6 +50,10 @@
       text-decoration: none;
       display: block;
       margin: 8px 0;
+      transition: color 0.3s;
+    }
+    .links a:hover {
+      color: #1f6feb;
     }
     footer {
       text-align: center;
@@ -55,6 +64,24 @@
     img.logo {
       width: 120px;
       margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -65,14 +92,14 @@
     <p>Reshaping decentralized staking economy</p>
   </header>
 
-  <section class="section">
+  <section class="section reveal">
     <h2>About 2FM</h2>
     <p>
       2FM is a utility token designed to power decentralized staking platforms and applications with transparency, security, and lightning-fast performance. Built on BNB Smart Chain, 2FM empowers users with ownership and seamless transactions in supported ecosystems.
     </p>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <h2>Token Supply & Tokenomics</h2>
     <p><strong>Total Supply:</strong> 1,000,000 2FM</p>
     <div class="tokenomics">
@@ -85,7 +112,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <h2>Explore More</h2>
     <div class="links">
       <a href="https://bscscan.com/token/0x8B01D231eb6313519475661B336031368a561dD5" target="_blank">🔗 View on BscScan</a>
@@ -94,7 +121,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <h2>Roadmap (Q3–Q4 2025)</h2>
     <ul>
       <li>✅ Token Launch & Verification</li>
@@ -108,5 +135,17 @@
   <footer>
     © 2025 2FM Token. All rights reserved.
   </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const height = window.innerHeight;
+        if (top < height - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
