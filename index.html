@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2FM Token | Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.5s, color 0.5s;
+    }
+    :root {
+      --bg-dark: #0d1117;
+      --bg-light: #f4f4f4;
+      --text-dark: #e6edf3;
+      --text-light: #0d1117;
+      --primary: #58a6ff;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+    header, footer {
+      text-align: center;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: var(--primary);
+    }
+    .section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(88, 166, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .svg-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('bg-animation.svg') repeat;
+      opacity: 0.05;
+    }
+    .language-switch {
+      margin: 10px;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .language-switch button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="dark">
+  <div class="svg-bg"></div>
+  <button class="toggle-btn" onclick="toggleTheme()">🌓 Mode</button>
+  <div class="language-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('id')">ID</button>
+  </div>
+  <header>
+    <h1 id="title">2FM Token</h1>
+    <p id="subtitle">Empowering decentralized future</p>
+  </header>
+
+  <section class="section">
+    <h2 id="about-title">About 2FM</h2>
+    <p id="about-desc">2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications.</p>
+    <table>
+      <tr><th>Chain</th><td>BNB Smart Chain</td></tr>
+      <tr><th>Utility</th><td>Staking, Governance, Transactions</td></tr>
+      <tr><th>Contract</th><td><a href="#">0xABC...DEF</a></td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Tokenomics</h2>
+    <table>
+      <tr><th>Category</th><th>Allocation</th></tr>
+      <tr><td>Liquidity</td><td>50%</td></tr>
+      <tr><td>Team</td><td>20%</td></tr>
+      <tr><td>Community</td><td>20%</td></tr>
+      <tr><td>Reserve</td><td>10%</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Live Stats</h2>
+    <p><strong>Live Price (CoinGecko):</strong> <span id="price">Loading...</span></p>
+    <p><strong>Holders (BscScan):</strong> <span id="holders">Loading...</span></p>
+  </section>
+
+  <footer>
+    © 2025 2FM Token. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "2FM Token",
+        subtitle: "Empowering decentralized future",
+        "about-title": "About 2FM",
+        "about-desc": "2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications."
+      },
+      id: {
+        title: "Token 2FM",
+        subtitle: "Menggerakkan masa depan terdesentralisasi",
+        "about-title": "Tentang 2FM",
+        "about-desc": "2FM adalah token utilitas berbasis BSC untuk mendukung aplikasi DeFi yang aman dan dapat diskalakan."
+      }
+    };
+
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+    }
+
+    function setLang(lang) {
+      Object.keys(translations[lang]).forEach(id => {
+        document.getElementById(id).textContent = translations[lang][id];
+      });
+    }
+  </script>
+</body>
+</html>
