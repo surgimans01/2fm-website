@@ -1,133 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>2FM Token</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2FM Token | Official Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-    }
-    .container {
+      background: #0d1117;
+      color: #e6edf3;
       padding: 20px;
-      max-width: 800px;
-      margin: auto;
     }
-    .section {
-      background-color: #161b22;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    header {
+      text-align: center;
+      padding: 30px 0;
     }
-    h2 {
+    h1 {
+      font-size: 3rem;
       color: #58a6ff;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    th, td {
-      text-align: left;
-      padding: 10px;
-      border-bottom: 1px solid #30363d;
+    nav a {
+      margin: 0 10px;
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .lang-toggle {
-      text-align: right;
-      margin: 10px 0;
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
     }
-    .lang-toggle button {
-      margin-left: 5px;
-      padding: 5px 10px;
-      background-color: #21262d;
-      color: #c9d1d9;
-      border: 1px solid #30363d;
-      border-radius: 5px;
-      cursor: pointer;
+    .section h2 {
+      color: #79c0ff;
     }
-    .lang-toggle button:hover {
-      background-color: #30363d;
+    .tokenomics ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .tokenomics li {
+      margin-bottom: 10px;
+    }
+    .links a {
+      color: #58a6ff;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="lang-toggle">
-      <button>EN</button>
-      <button>ID</button>
-    </div>
+  <header>
+    <h1>2FM Token</h1>
+    <p>Reshaping decentralized staking economy</p>
+  </header>
 
-    <h1 style="color: #58a6ff;">2FM Token</h1>
-    <p>Empowering decentralized future</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+  </nav>
 
-    <div class="section">
-      <h2>About 2FM</h2>
-      <p>2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications.</p>
-    </div>
+  <section id="about" class="section">
+    <h2>About 2FM</h2>
+    <p>
+      2FM is a utility token designed to power decentralized staking platforms and applications with transparency, security, and lightning-fast performance. Built on BNB Smart Chain, 2FM empowers users with ownership and seamless transactions in supported ecosystems.
+    </p>
+  </section>
 
-    <div class="section">
-      <h2>Tokenomics</h2>
-      <table>
-        <tr>
-          <th>Distribution</th>
-          <td>through smart contract logic.</td>
-        </tr>
-        <tr>
-          <th>Fixed Supply</th>
-          <td>Total supply is locked at 1,000,000 2FM with no additional minting possible.</td>
-        </tr>
-        <tr>
-          <th>DApp Compatibility</th>
-          <td>Fully compatible with Web3 wallets, staking platforms, and DEX integrations.</td>
-        </tr>
-        <tr>
-          <th>Transparency</th>
-          <td>All on-chain data is publicly viewable via BscScan, including transactions, holders, and liquidity.</td>
-        </tr>
-      </table>
-      <section id="roadmap" class="text-white py-10 px-4 md:px-16 bg-gray-900">
-  <h2 class="text-3xl font-bold text-blue-400 mb-6">Roadmap</h2>
-  <div class="space-y-6">
-    <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold text-white">Q3 2024 - Launch & Deployment</h3>
-      <ul class="list-disc pl-5 text-gray-300">
-        <li>Smart contract deployment (BSC)</li>
-        <li>Token launch & liquidity pool creation</li>
-        <li>Website and branding live</li>
+  <section id="tokenomics" class="section">
+    <h2>Tokenomics</h2>
+    <p><strong>Total Supply:</strong> 1,000,000 2FM</p>
+    <div class="tokenomics">
+      <ul>
+        <li><strong>Staking & Rewards:</strong> 40%</li>
+        <li><strong>Liquidity Pool:</strong> 25%</li>
+        <li><strong>Ecosystem & Development:</strong> 20%</li>
+        <li><strong>Team (Locked):</strong> 10%</li>
+        <li><strong>Airdrop & Marketing:</strong> 5%</li>
       </ul>
     </div>
-    <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold text-white">Q4 2024 - Utility Expansion</h3>
-      <ul class="list-disc pl-5 text-gray-300">
-        <li>Staking feature integration</li>
-        <li>Community rewards & airdrop program</li>
-        <li>Partnership announcements</li>
-      </ul>
+  </section>
+
+  <section id="roadmap" class="section">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✅ Q3 2024: Smart Contract Launch</li>
+      <li>🚀 Q4 2024: Website, LP, and Community Building</li>
+      <li>💰 Q1 2025: Staking Platform + Rewards</li>
+      <li>📄 Q2 2025: Whitepaper & Audit Completion</li>
+      <li>🌍 Q3 2025: Listings & Ecosystem Expansion</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Explore More</h2>
+    <div class="links">
+      <a href="https://bscscan.com/token/0x8B01D231eb6313519475661B336031368a561dD5" target="_blank">🔗 View on BscScan</a>
+      <a href="https://x.com/2fmProject?t=ceTbG7sIusYnX1OaSZ6VFA&s=09" target="_blank">🐦 Twitter</a>
     </div>
-    <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold text-white">Q1 2025 - Ecosystem Growth</h3>
-      <ul class="list-disc pl-5 text-gray-300">
-        <li>DApp marketplace beta release</li>
-        <li>Mobile app development begins</li>
-        <li>Listing on additional DEXs & CEXs</li>
-      </ul>
-    </div>
-    <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold text-white">Q2 2025 - Governance & DAO</h3>
-      <ul class="list-disc pl-5 text-gray-300">
-        <li>Launch of 2FM DAO governance</li>
-        <li>Community voting mechanism</li>
-        <li>Full decentralization roadmap release</li>
-      </ul>
-    </div>
-  </div>
-</section>
-    </div>
-  </div>
+  </section>
+
+  <footer>
+    © 2025 2FM Token. All rights reserved.
+  </footer>
 </body>
 </html>
