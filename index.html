@@ -1,192 +1,96 @@
 
-<!DOCTYP
-<section class="section">
-  <h2>2FM Smart Contract Overview</h2>
-  <p>
-    Official Smart Contract Address: 
-    <a href="https://bscscan.com/token/0x8B01D231eb6313519475661B336031368a561dD5" target="_blank">
-      0x8B01D231eb6313519475661B336031368a561dD5
-    </a>
-  </p>
-  <table>
-    <tr><th>Feature</th><th>Description</th></tr>
-    <tr>
-      <td>Security</td>
-      <td>Built with Solidity, audited-ready, and implements anti-rug mechanisms with transparent operations.</td>
-    </tr>
-    <tr>
-      <td>Automated Distribution</td>
-      <td>Handles rewards, burns, and liquidity management through smart contract logic.</td>
-    </tr>
-    <tr>
-      <td>Fixed Supply</td>
-      <td>Total supply is locked at 1,000,000 2FM with no additional minting possible.</td>
-    </tr>
-    <tr>
-      <td>DApp Compatibility</td>
-      <td>Fully compatible with Web3 wallets, staking platforms, and DEX integrations.</td>
-    </tr>
-    <tr>
-      <td>Transparency</td>
-      <td>All on-chain data is publicly viewable via BscScan, including transactions, holders, and liquidity.</td>
-    </tr>
-  </table>
-</section>
-E html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2FM Token | Official</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2FM Token</title>
   <style>
     body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      transition: background 0.5s, color 0.5s;
+      padding: 0;
     }
-    :root {
-      --bg-dark: #0d1117;
-      --bg-light: #f4f4f4;
-      --text-dark: #e6edf3;
-      --text-light: #0d1117;
-      --primary: #58a6ff;
-    }
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-    body.light {
-      background: var(--bg-light);
-      color: var(--text-light);
-    }
-    header, footer {
-      text-align: center;
+    .container {
       padding: 20px;
-    }
-    h1, h2 {
-      color: var(--primary);
+      max-width: 800px;
+      margin: auto;
     }
     .section {
-      max-width: 900px;
-      margin: 30px auto;
-      background: rgba(88, 166, 255, 0.1);
+      background-color: #161b22;
       border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
-    .toggle-btn {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      padding: 10px;
-      cursor: pointer;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 5px;
+    h2 {
+      color: #58a6ff;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
     }
     th, td {
+      text-align: left;
       padding: 10px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #30363d;
     }
-    .svg-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url('bg-animation.svg') repeat;
-      opacity: 0.05;
-    }
-    .language-switch {
-      margin: 10px;
+    .lang-toggle {
       text-align: right;
-      padding-right: 20px;
+      margin: 10px 0;
     }
-    .language-switch button {
+    .lang-toggle button {
       margin-left: 5px;
-      padding: 6px 10px;
+      padding: 5px 10px;
+      background-color: #21262d;
+      color: #c9d1d9;
+      border: 1px solid #30363d;
+      border-radius: 5px;
       cursor: pointer;
+    }
+    .lang-toggle button:hover {
+      background-color: #30363d;
     }
   </style>
 </head>
-<body class="dark">
-  <div class="svg-bg"></div>
-  <button class="toggle-btn" onclick="toggleTheme()">🌓 Mode</button>
-  <div class="language-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('id')">ID</button>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button>EN</button>
+      <button>ID</button>
+    </div>
+
+    <h1 style="color: #58a6ff;">2FM Token</h1>
+    <p>Empowering decentralized future</p>
+
+    <div class="section">
+      <h2>About 2FM</h2>
+      <p>2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications.</p>
+    </div>
+
+    <div class="section">
+      <h2>Tokenomics</h2>
+      <table>
+        <tr>
+          <th>Distribution</th>
+          <td>through smart contract logic.</td>
+        </tr>
+        <tr>
+          <th>Fixed Supply</th>
+          <td>Total supply is locked at 1,000,000 2FM with no additional minting possible.</td>
+        </tr>
+        <tr>
+          <th>DApp Compatibility</th>
+          <td>Fully compatible with Web3 wallets, staking platforms, and DEX integrations.</td>
+        </tr>
+        <tr>
+          <th>Transparency</th>
+          <td>All on-chain data is publicly viewable via BscScan, including transactions, holders, and liquidity.</td>
+        </tr>
+      </table>
+    </div>
   </div>
-  <header>
-    <h1 id="title">2FM Token</h1>
-    <p id="subtitle">Empowering decentralized future</p>
-  </header>
-
-  <section class="section">
-    <h2 id="about-title">About 2FM</h2>
-    <p id="about-desc">2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications.</p>
-    <table>
-      <tr><th>Chain</th><td>BNB Smart Chain</td></tr>
-      <tr><th>Utility</th><td>Staking, Governance, Transactions</td></tr>
-      <tr><th>Contract</th><td><a href="#">0xABC...DEF</a></td></tr>
-    </table>
-  </section>
-
-  <section class="section">
-    <h2>Tokenomics</h2>
-    <table>
-      <tr><th>Category</th><th>Allocation</th></tr>
-      <tr><td>Liquidity</td><td>50%</td></tr>
-      <tr><td>Team</td><td>20%</td></tr>
-      <tr><td>Community</td><td>20%</td></tr>
-      <tr><td>Reserve</td><td>10%</td></tr>
-    </table>
-  </section>
-
-  <section class="section">
-    <h2>Live Stats</h2>
-    <p><strong>Live Price (CoinGecko):</strong> <span id="price">Loading...</span></p>
-    <p><strong>Holders (BscScan):</strong> <span id="holders">Loading...</span></p>
-  </section>
-
-  <footer>
-    © 2025 2FM Token. All rights reserved.
-  </footer>
-
-  <script>
-    const translations = {
-      en: {
-        title: "2FM Token",
-        subtitle: "Empowering decentralized future",
-        "about-title": "About 2FM",
-        "about-desc": "2FM is a powerful BSC-based utility token to drive secure and scalable DeFi applications."
-      },
-      id: {
-        title: "Token 2FM",
-        subtitle: "Menggerakkan masa depan terdesentralisasi",
-        "about-title": "Tentang 2FM",
-        "about-desc": "2FM adalah token utilitas berbasis BSC untuk mendukung aplikasi DeFi yang aman dan dapat diskalakan."
-      }
-    };
-
-    function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle('dark');
-      body.classList.toggle('light');
-    }
-
-    function setLang(lang) {
-      Object.keys(translations[lang]).forEach(id => {
-        document.getElementById(id).textContent = translations[lang][id];
-      });
-    }
-  </script>
 </body>
 </html>
